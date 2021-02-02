@@ -11,9 +11,7 @@ singleton x = \ x' -> x == x'
 
 desdeLista :: (Eq a) => [a] -> Conjunto a
 desdeLista [] = vacio
-desdeLista [x] = \ x' -> singleton x x'
--- Falta arreglar el caso para length > 1
--- desdeLista (x:xs) = \ x' -> (xs == x' && desdeLista x xs)
+desdeLista (xs:x) = \ x' -> singleton xs x' || desdeLista x x'
 
 complemento :: (Eq a) => a -> Conjunto a
 complemento x = \ x' -> x /= x'
