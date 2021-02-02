@@ -18,3 +18,7 @@ diferencia conjunto1 conjunto2 = \ x -> miembro conjunto1 x && not (miembro conj
 diferenciaSimetrica :: Conjunto a -> Conjunto a -> Conjunto a
 diferenciaSimetrica conjunto1 conjunto2 = 
   \ x -> union (diferencia conjunto1 conjunto2) (diferencia conjunto2 conjunto1) x
+
+cartesiano :: Conjunto a -> Conjunto a -> Conjunto (a,a)
+cartesiano conjunto1 conjunto2 = 
+  \ (x,y) -> miembro conjunto1 x && miembro conjunto2 y
