@@ -5,7 +5,7 @@
 
 -- a)
 primerEjercicio :: [Int]
-primerEjercicio = take 5 [4,2..]
+primerEjercicio = take 5 [x | x <- [4,2..]]
 
 -- b)
 potencias :: Int -> [Int]
@@ -13,7 +13,7 @@ potencias n = [2^x | x <- [0..n-1]]
 
 -- c)
 impares :: Int -> [Int]
-impares n = take n [1,3..]
+impares n = take n [x | x <- [1,3..]]
 
 -- d)
 replicar :: Int -> a -> [a]
