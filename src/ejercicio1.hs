@@ -1,6 +1,6 @@
 -- Ejercicio 1
 -- Autores:
---  - Denyl Romero
+--  - Denylson Romero
 --  - Daniel Marin
 
 type Conjunto a = a -> Bool

@@ -1,6 +1,6 @@
 -- Ejercicio 2
 -- Autores:
---  - Denyl Romero
+--  - Denylson Romero
 --  - Daniel Marin
 
 listDigits :: Int -> [Int]
