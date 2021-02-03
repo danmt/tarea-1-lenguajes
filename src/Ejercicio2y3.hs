@@ -19,7 +19,8 @@ replicar :: Int -> a -> [a]; replicar n x = [y | y <- map (const x) [1..n]]
 -- e)
 caracteres :: Int -> Maybe String; caracteres x = if x > 0 && x < 27 then Just (take x ['A'..]) else Nothing
 
--- f) NOTA: Podria ser menor igual o menor estricto, falta comprobar eso y que devuelva int o float. error en enunciado
-normasMenoresQue x = [(a,b) | a <- [-x..x], b <- [-x..x], sqrt(a**2 + b**2) < x]
+-- f)
+normasMenoresQue :: Float -> [(Int, Int)]; normasMenoresQue x = [(a,b) | a <- [-y..y], b <- [-y..y], sqrt(fromIntegral((a^2 + b^2))) <= x] where y = round x
 
--- g) Me falta la g
+-- g)
+factores :: Int -> [Int]; factores 1 = []; factores n | factor == [] = [n] | otherwise = factor ++ factores (n `div` (head factor)) where factor = take 1 (filter (\x -> (n `mod` x) == 0) [2..n-1])
