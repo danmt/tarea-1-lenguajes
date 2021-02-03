@@ -22,7 +22,7 @@ replicar n x = [y | y <- map (const x) [1..n]]
 -- e)
 caracteres :: Int -> Maybe String
 caracteres x
-  | x >= 0 && x < 27 = Just ([y | y <- ['A'..], (fromEnum y) < (fromEnum 'A' + x)])
+  | x >= 0 && x < 27 = Just ([y | y <- ['A'..'Z'], (fromEnum y) < (fromEnum 'A' + x)])
   | otherwise = Nothing
 
 -- f)
