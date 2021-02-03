@@ -4,7 +4,8 @@
 --  - Daniel Marin
 
 -- a)
-take 5 [4,2..]
+primerEjercicio :: [Int]
+primerEjercicio = take 5 [4,2..]
 
 -- b)
 potencias :: Int -> [Int]
@@ -20,7 +21,9 @@ replicar n x = [y | y <- map (const x) [1..n]]
 
 -- e)
 caracteres :: Int -> Maybe String
-caracteres x = if x > 0 && x < 27 then Just (take x ['A'..]) else Nothing
+caracteres x
+  | x > 0 && x < 27 = Just (take x ['A'..])
+  | otherwise = Nothing
 
 -- f)
 normasMenoresQue :: Float -> [(Int, Int)]
