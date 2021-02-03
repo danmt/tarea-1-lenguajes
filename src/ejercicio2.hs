@@ -4,7 +4,11 @@
 --  - Daniel Marin
 
 listDigits :: Int -> [Int]
-listDigits x = if x <= 0 then [] else listDigits (x `div` 10) ++ [x `mod` 10]
+listDigits x 
+  | x <= 0 = []
+  | otherwise = listDigits (div x 10) ++ [mod x 10]
 
 listDigitsRev :: Int -> [Int]
-listDigitsRev x = if x <= 0 then [] else x `mod` 10 : listDigitsRev (x `div` 10)
+listDigitsRev x 
+  | x <= 0 = [] 
+  | otherwise = mod x 10 : listDigitsRev (div x 10)
