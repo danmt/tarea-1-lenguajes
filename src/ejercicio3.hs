@@ -9,7 +9,8 @@ primerEjercicio = take 5 [4,2..]
 
 -- b)
 potencias :: Int -> [Int]
-potencias n = [2^x | x <- [1..n]]
+potencias 0 = []
+potencias n = 1 : [2^x | x <- [1..n-1]]
 
 -- c)
 impares :: Int -> [Int]
