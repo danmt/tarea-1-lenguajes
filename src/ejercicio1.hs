@@ -49,3 +49,5 @@ cartesiano conjunto1 conjunto2 =
   \ (x,y) -> miembro conjunto1 x && miembro conjunto2 y
 
 -- k)
+transformar :: (b -> a) -> Conjunto a -> Conjunto b
+transformar funcion conjunto = \ x -> miembro conjunto (funcion x)
